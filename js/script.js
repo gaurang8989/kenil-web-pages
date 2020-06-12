@@ -15,7 +15,7 @@ var errorMsg = {
     email: 'E-mail is invalid.',
     tooShort: 'Input is too short.',
     tooLong: 'Input is too long.'
-    pwd: 'Incorrect format'
+    // pwd: 'Incorrect format'
 };
 
 //regex stuff
@@ -89,7 +89,7 @@ function validateInput(e) {
                 e.target.style.cssText = applyValid;
                 return true;
             } else if (pattern.passpatt.test(e.target.value) === false && e.target.value !== '') {
-                input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.pwd, 1);
+                input.say('.' + e.target.parentNode.className + ' .notification','Incorrect format', 1);
                 e.target.style.cssText = applyError;
                 return false;
             }
